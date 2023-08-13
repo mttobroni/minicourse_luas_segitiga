@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
 
     </head>
     <body>
-        <h1>keliling segitiga</h1>
+        <div class="header">
+            <div class="title">
+                <h1>HITUNG SEGITIGA</h1>
+            </div>
+        </div>
+        
+        <div class="gambarrumus">
+            <div>
+                <img src="/img/segitiga.jpeg" />
+            </div>
+            
+        </div>
+        <br> 
+        <P>MENU :</P>
+        <input type="radio" onclick="tampilkanRumus('luas')" id="menu_segitiga_luas" name="menu_segitiga" value="luas">
+        <label for="menu_segitiga_luas">HITUNG LUAS</label><br>
+        <input type="radio" onclick="tampilkanRumus('keliling')" id="menu_segitiga_keliling" name="menu_segitiga" value="keliling">
+        <label for="menu_segitiga_keliling">HITUNG KELILING</label><br>
+
+        <div id="luas_segitiga" class="rumus">
+            <p>rumus luas segitiga yaitu:</p>
+            <p>L= 1/2 x a x t</p>
+            <p>dimana :</p>
+            <p>L = Luas</p>
+            <p>a = panjang alas</p>
+            <p>t = tinggi</p>
+    
+    
+            <hr> <h1>HITUNG LUAS SEGITIGA</h1>
+            <input id="input_alas" type="number" placeholder="nilai alas"><br>
+            <input id="input_tinggi" type="number" placeholder="nilai tinggi"><br>
+            <input id="input_luas" type="number" value="0" disabled>
+            <button onclick="hitungLuas()">HITUNG</button>
+            <button>RESET</button>
+        </div>
+
+        <div id="keliling_segitiga" class="rumus">
+            <p>rumus keliling segitiga yaitu:</p>
+            <p>K= a + b + c</p>
+            <p>dimana :</p>
+            <p>K = Keliling</p>
+            <p>a = panjang sisi a</p>
+            <p>b = panjang sisi b</p>
+            <p>c = panjang sisi c</p>
+    
+            <hr> <h1>HITUNG keliling SEGITIGA</h1>
+            <input id="input_alas" type="number" placeholder="nilai alas"><br>
+            <input id="input_tinggi" type="number" placeholder="nilai tinggi"><br>
+            <input id="input_luas" type="number" value="0" disabled>
+            <button onclick="hitungLuas()">HITUNG</button>
+            <button>RESET</button>
+        </div>
+
+        <script src="/js/script.js"></script>
     </body>
 </html>
